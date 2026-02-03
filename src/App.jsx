@@ -1,19 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 import './App.css'
 
 function App() {
   return (
-    <div>
-      <h1>Yes or No</h1>
-      <div class="buttons">
-        <button>Yes</button>
-        <button>No</button>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/yes" element={<Yes />} />
+      <Route path="/no" element={<No />} />
+    </Routes>
+  )
+}
+
+function Home() {
+  const navigate = useNavigate()
+
+  return (
+    <div className="buttons">
+      <h1>yes or no?</h1>
+      <div>
+        <button onClick={() => navigate('/no')}>No</button>
+        <button onClick={() => navigate('/yes')}>Yes</button>
       </div>
     </div>
   )
 }
 
-export default App
+function Yes() {
+  return <h1>You chose YES 😄</h1>
+}
 
+function No() {
+  return <h1>You chose NO 😢</h1>
+}
+
+export default App
