@@ -5,18 +5,31 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+
+.container {
+  max-width: 600px;
+  margin: 100px auto;
+  text-align: center;
+  font-size: 18px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.text {
+  margin-bottom: 30px;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
 
 @keyframes logo-spin {
   from {
@@ -40,3 +53,5 @@
 .read-the-docs {
   color: #888;
 }
+
+

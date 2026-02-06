@@ -1,41 +1,40 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
+  const story = [
+    "It was a quiet evening.",
+    "You sat there reading, not expecting anything unusual.",
+    "Then something caught your attention.",
+    "So here’s the question… do you want to continue?"
+  ]
 
-  function NoHandle(){
-    alert("temporary alert bery bery sad")
-  }
+  const [step, setStep] = useState(0)
 
-  function YesHandle(){
-    alert("temporary alert bery bery happy")
-  }
-
-  function instaLink() {
-
-  }
+  const isLastStep = step === story.length - 1
 
   return (
-    <div>
-      <h1>Yes or Yes</h1>
-      <div class="buttons">
-        <button onClick={NoHandle}>No</button>
-        <button onClick={YesHandle}>Yes</button>
-      </div>
-      <div>
-        <a
-        href='https://www.instagram.com/reel/DT4kS8FCg_i/?igsh=Y3JkdXhhbDBrM3A5'
-        target='_blank'
-        rel='noopener noreferrer'
-        >
-        <button>Test</button>
-        </a>
-      </div>
+    <div className="container">
+      <p className="text">{story[step]}</p>
+
+      {!isLastStep && (
+        <button onClick={() => setStep(step + 1)}>
+          Continue
+        </button>
+      )}
+
+      {isLastStep && (
+        <div className="buttons">
+          <button onClick={() => alert("You said NO")}>
+            No
+          </button>
+          <button onClick={() => alert("You said YES")}>
+            Yes
+          </button>
+        </div>
+      )}
     </div>
   )
 }
 
 export default App
-
