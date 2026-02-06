@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div>
-      <h1>Yes or No</h1>
+      <h1>Yes or Yes</h1>
       <div class="buttons">
         <button onClick={NoHandle}>No</button>
         <button onClick={YesHandle}>Yes</button>
@@ -30,7 +30,7 @@ function App() {
         target='_blank'
         rel='noopener noreferrer'
         >
-          <button>Test</button>
+        <button>Test</button>
         </a>
       </div>
     </div>
