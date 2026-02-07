@@ -5,8 +5,7 @@ function App() {
   // INTRO STORY STEPS
   const intro = [
     {
-      text: "I have a question",
-      image: "/christy/question.gif",
+      text: "So like I have a question",
     },
     {
       text: "erm...",
@@ -21,8 +20,7 @@ function App() {
       image: "/christy/cringe.png",
     },
     {
-      text: "Christy",
-      image: "/christy/christy.gif",
+      text: "Christy..."
     },
     {
       text: "Would you like to be my girlfriend?",
