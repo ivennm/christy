@@ -36,7 +36,7 @@ function App() {
     },
     {
       text: "fr fr?",
-      image: "/christy/frfr.gif",
+      image: "/christy/frfr.png",
     },
     {
       text: "me?",
