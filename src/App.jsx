@@ -36,7 +36,7 @@ function App() {
     },
     {
       text: "fr fr?",
-      image: "/christy/suspicious.gif",
+      image: "/christy/frfr.gif",
     },
     {
       text: "me?",
@@ -137,7 +137,7 @@ function App() {
       {/* BAD END */}
       {section === 'bad_end' && (
         <>
-          <h2>The story is over.</h2>
+          <h2>...</h2>
           <img
             src="/christy/sad_cat.gif"
             alt="Sad ending"
