@@ -17,7 +17,8 @@ function App() {
       image: "christy/shy.jpg"
     },
     {
-      text: "but I thought I might ask anyway",
+      text: "but I thought i'd give it a shot",
+      image: "cringe.png"
     },
     {
       text: "Christy",
