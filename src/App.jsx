@@ -40,7 +40,7 @@ function App() {
     },
     {
       text: "me?",
-      image: "/christy/me.gif",
+      image: "/christy/me.jpg",
     },
   ]
 
