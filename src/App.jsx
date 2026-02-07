@@ -18,7 +18,7 @@ function App() {
     },
     {
       text: "but I thought i'd give it a shot",
-      image: "cringe.png"
+      image: "/christy/cringe.png",
     },
     {
       text: "Christy",
@@ -41,7 +41,7 @@ function App() {
     },
     {
       text: "me?",
-      image: "/christy/me.jpg",
+      image: "/christy/me.jpeg",
     },
   ]
 
