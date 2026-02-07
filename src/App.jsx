@@ -14,7 +14,7 @@ function App() {
     },
     {
       text: "I know i'm kind of awkward and cringe and autistic...",
-      image: "christy/shy.gif"
+      image: "christy/shy.jpg"
     },
     {
       text: "but I thought I might ask anyway",
