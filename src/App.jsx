@@ -2,37 +2,150 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const story = [
-    "It was a quiet evening.",
-    "You sat there reading, not expecting anything unusual.",
-    "Then something caught your attention.",
-    "So here’s the question… do you want to continue?"
+  // INTRO STORY STEPS
+  const intro = [
+    {
+      text: "I have a question",
+      image: "/christy/question.gif",
+    },
+    {
+      text: "erm...",
+      image: "/christy/erm.gif",
+    },
+    {
+      text: "I know i'm kind of awkward and cringe and autistic...",
+      image: "christy/shy.gif"
+    },
+    {
+      text: "but I thought I might ask anyway",
+    },
+    {
+      text: "Christy",
+      image: "/christy/christy.gif",
+    },
+    {
+      text: "Would you like to be my girlfriend?",
+      image: "/christy/heart.gif",
+    },
   ]
 
+  // FOLLOW-UP QUESTIONS
+  const questions = [
+    {
+      text: "Are you sure?",
+    },
+    {
+      text: "fr fr?",
+      image: "/christy/suspicious.gif",
+    },
+    {
+      text: "me?",
+      image: "/christy/me.gif",
+    },
+  ]
+
+  const [section, setSection] = useState('intro') // intro | questions | good_end | bad_end
   const [step, setStep] = useState(0)
 
-  const isLastStep = step === story.length - 1
+  function handleContinue() {
+    setStep(step + 1)
+  }
+
+  function handleYes() {
+    if (section === 'intro') {
+      setSection('questions')
+      setStep(0)
+      return
+    }
+
+    if (section === 'questions') {
+      if (step < questions.length - 1) {
+        setStep(step + 1)
+      } else {
+        setSection('good_end')
+      }
+    }
+  }
+
+  function handleNo() {
+    setSection('bad_end')
+  }
 
   return (
     <div className="container">
-      <p className="text">{story[step]}</p>
 
-      {!isLastStep && (
-        <button onClick={() => setStep(step + 1)}>
-          Continue
-        </button>
+      {/* INTRO SECTION */}
+      {section === 'intro' && (
+        <>
+          <div>
+            <p>{intro[step].text}</p>
+          </div>
+
+          {intro[step].image && (
+            <img
+              src={intro[step].image}
+              alt=""
+              className="story-image"
+            />
+          )}
+          
+          {step < intro.length - 1 ? (
+            <button onClick={handleContinue}>Continue</button>
+          ) : (
+            <div className="buttons">
+              <button onClick={handleNo}>No</button>
+              <button onClick={handleYes}>Yes</button>
+            </div>
+            
+          )}
+        </>
       )}
 
-      {isLastStep && (
-        <div className="buttons">
-          <button onClick={() => alert("You said NO")}>
-            No
-          </button>
-          <button onClick={() => alert("You said YES")}>
-            Yes
-          </button>
-        </div>
+      {/* QUESTIONS SECTION */}
+      {section === 'questions' && (
+        <>
+          <p>{questions[step].text}</p>
+
+          {questions[step].image && (
+            <img
+              src={questions[step].image}
+              alt=""
+              className="story-image"
+            />
+          )}
+
+          <div className="buttons">
+            <button onClick={handleNo}>No</button>
+            <button onClick={handleYes}>Yes</button>
+          </div>
+        </>
       )}
+
+      {/* GOOD END */}
+      {section === 'good_end' && (
+        <>
+          <h2>YAYAYAYAYA</h2>
+          <img
+            src="/christy/yay.gif"
+            alt="Happy ending"
+            className="end-image"
+          />
+          <h2>💛💛💛</h2>
+        </>
+      )}
+
+      {/* BAD END */}
+      {section === 'bad_end' && (
+        <>
+          <h2>The story is over.</h2>
+          <img
+            src="/christy/sad_cat.gif"
+            alt="Sad ending"
+            className="end-image"
+          />
+        </>
+      )}
+
     </div>
   )
 }
