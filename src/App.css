@@ -5,6 +5,14 @@
   text-align: center;
 }
 
+.story-image {
+  max-width: 300px;   /* adjust this */
+  width: 100%;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  border-radius: 12px;
+}
 
 .container {
   max-width: 600px;
