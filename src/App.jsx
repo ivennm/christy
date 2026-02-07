@@ -139,7 +139,7 @@ function App() {
         <>
           <h2>...</h2>
           <img
-            src="/christy/sad_cat.gif"
+            src="/christy/sad_cat.png"
             alt="Sad ending"
             className="end-image"
           />
