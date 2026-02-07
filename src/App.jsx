@@ -143,6 +143,7 @@ function App() {
             alt="Sad ending"
             className="end-image"
           />
+          <h2>you hate me and want me to die</h2>
         </>
       )}
 
