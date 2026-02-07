@@ -10,7 +10,7 @@ function App() {
     },
     {
       text: "erm...",
-      image: "/christy/erm.gif",
+      image: "/christy/erm.jpg",
     },
     {
       text: "I know i'm kind of awkward and cringe and autistic...",
