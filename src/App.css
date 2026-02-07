@@ -55,6 +55,14 @@ button {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
+  .story-image {
+  max-width: 300px;   /* adjust this */
+  width: 100%;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  border-radius: 12px;
+}
 }
 
 .card {
