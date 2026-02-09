@@ -13,7 +13,7 @@ function App() {
     },
     {
       text: "I know i'm kind of awkward and cringe and autistic...",
-      image: "christy/shy.jpg"
+      image: "/christy/shy.jpg"
     },
     {
       text: "but I thought i'd give it a shot",
