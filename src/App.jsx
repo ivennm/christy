@@ -24,7 +24,6 @@ function App() {
     },
     {
       text: "Would you like to be my girlfriend?",
-      image: "/christy/heart.gif",
     },
   ]
 
